@@ -1,24 +1,25 @@
-# typescript-library-template
+# tsconfig-domdomegg
 
-Personal template for creating TypeScript libraries.
+Personal preset for general TypeScript settings. To be used in conjunction with a TSConfig for the specific platform (e.g. @tsconfig/node-lts)
 
-## Quick start
-
-1. If it should be published to NPM, add the `NPM_TOKEN` secret (make sure not to leave a trailing newline in there!). Otherwise, add `"private": true` in `package.json`.
-2. Update the package name, description and repo URL in `package.json`
-3. Enable 'Allow GitHub Actions to create and approve pull requests' in _Settings > Actions (General) > `Workflow permissions_
-4. Add the repo to the [file sync automation rules](https://github.com/domdomegg/domdomegg/blob/master/.github/workflows/repo-file-sync.yaml)
-5. Update the README, using the template commented out below
-
-<!--
-
-# TODO: name of library
-
-TODO: A short description of what the library does, explaining why people might want to use it.
+See https://github.com/tsconfig/bases/issues/262 for a brief motivation behind creating this separate preset. In short: I want great type-checking, but without linting rules. This is because TypeScript's linting rules:
+- often get in the way of testing things out, e.g. it's useful to be comment stuff out temporarily to see behavior without the compiler complaining about unused code or variables
+- tend to just duplicate rules better handled by [ESLint](https://eslint.org/) anyway
 
 ## Usage
 
-TODO: usage instructions
+In your `tsconfig.json`:
+
+```jsonc
+{
+    "extends": [
+        // Set the TSConfig for the specific platform, see https://github.com/tsconfig/bases
+        "@tsconfig/node-lts/tsconfig.json",
+        "tsconfig-domdomegg/tsconfig.json"
+    ],
+    // ...
+}
+```
 
 ## Contributing
 
@@ -28,7 +29,6 @@ Pull requests are welcomed on GitHub! To get started:
 2. Clone the repository
 3. Install dependencies with `npm install`
 4. Run `npm run test` to run tests
-5. Build with `npm run build`
 
 ## Releases
 
@@ -39,5 +39,3 @@ To release:
 1. Use `npm version <major | minor | patch>` to bump the version
 2. Run `git push --follow-tags` to push with tags
 3. Wait for GitHub Actions to publish to the NPM registry.
-
--->

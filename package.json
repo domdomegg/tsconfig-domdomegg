@@ -1,37 +1,20 @@
 {
-  "name": "typescript-library-template",
+  "name": "tsconfig-domdomegg",
   "version": "0.0.0",
-  "description": "Template for creating TypeScript libraries",
+  "description": "Personal preset for general TypeScript settings. To be used in conjunction with a TSConfig for the specific platform (e.g. @tsconfig/node-lts)",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/domdomegg/typescript-library-template.git"
+    "url": "https://github.com/domdomegg/tsconfig-domdomegg.git"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "tsconfig.json"
   ],
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest --watch",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "clean": "rm -rf dist",
-    "build": "tsc --project tsconfig.build.json",
-    "prepublishOnly": "npm run clean && npm run build"
+    "test": "tsc --showConfig"
   },
   "devDependencies": {
-    "@tsconfig/node-lts": "^20.1.3",
-    "@tsconfig/strictest": "^2.0.5",
-    "eslint": "^8.57.0",
-    "eslint-config-domdomegg": "^1.2.3",
-    "typescript": "^5.3.3",
-    "vitest": "^1.4.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint-config-domdomegg"
-    ]
+    "typescript": "^5.3.3"
   }
 }

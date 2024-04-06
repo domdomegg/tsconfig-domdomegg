@@ -1,6 +1,10 @@
 {
-  "extends": ["@tsconfig/node-lts/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
-  "include": [
-    "src/**/*.ts"
-  ],
-}
+    "compilerOptions": {
+      "strict": true,
+      "exactOptionalPropertyTypes": true,
+      "noImplicitReturns": true,
+      "noUncheckedIndexedAccess": true,
+    },
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "_version": "2.0.0"
+  }

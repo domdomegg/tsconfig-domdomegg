@@ -1,3 +1,2 @@
-export const sum = (a: number, b: number): number => a + b;
-
-export const multiply = (a: number, b: number): number => a * b;
+// This is a placeholder file so that our test: `tsc --showConfig`
+// doesn't complain about having no TypeScript files
