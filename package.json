@@ -1,6 +1,6 @@
 {
   "name": "tsconfig-domdomegg",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Personal preset for general TypeScript settings. To be used in conjunction with a TSConfig for the specific platform (e.g. @tsconfig/node-lts)",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",
